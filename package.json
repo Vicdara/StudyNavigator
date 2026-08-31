@@ -1,0 +1,42 @@
+{
+  "name": "study-navigator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test:self": "node scripts/self-check.mjs",
+    "video:preview": "remotion preview src/remotion/index.ts",
+    "video:render": "remotion render src/remotion/index.ts ProductDemo out/video.mp4",
+    "video:render:fast": "remotion render src/remotion/index.ts ProductDemo out/video.mp4 --concurrency=4 --scale=0.5",
+    "video:still": "remotion still src/remotion/index.ts ProductDemo out/thumbnail.png --frame=650"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.475.0",
+    "mammoth": "^1.12.2",
+    "pdfjs-dist": "^4.10.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.519",
+    "@remotion/cli": "^4.0.519",
+    "@remotion/tailwind": "^4.0.519",
+    "@types/node": "^20.17.19",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "puppeteer-core": "^25.9.0",
+    "remotion": "^4.0.519",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.11"
+  }
+}
